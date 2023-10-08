@@ -1,1 +1,2 @@
 Surprisingly the threads are all referring to the same object. I thought that for sure this Lazy Instantiation would break and that the threads would make multiple objects due to one thread not having gone all the way through the process of creating the object while another thread beats it to the punch.
+Maybe I am overlooking a mistake I made however, I think that the point of this exercise was to break the pattern.
