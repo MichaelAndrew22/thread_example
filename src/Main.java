@@ -1,15 +1,17 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
-        threadTest[] threads = new threadTest[10];
+        ArrayList<Thread> threadList = new ArrayList<Thread>();
 
-
-        for(int i = 0; i < 10; i++){
-            threads[i] = new threadTest();
-            threads[i].register(String.valueOf(i));
-            threads[i].start();
-            threads[i].run();
+        for(int i = 0; i < 3; i++){
+            threadList.add(new threadTest("Thread " + i + ""));
         }
+
+            for(Thread thread: threadList){
+                thread.start();
+            }
 
 
     }
